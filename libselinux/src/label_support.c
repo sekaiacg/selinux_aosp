@@ -33,11 +33,11 @@ static inline int read_spec_entry(char **entry, char **ptr, int *len, const char
 	*len = 0;
 
 	while (!isspace((unsigned char)**ptr) && **ptr != '\0') {
-		if (!isascii((unsigned char)**ptr)) {
-			errno = EINVAL;
-			*errbuf = "Non-ASCII characters found";
-			return -1;
-		}
+		//if (!isascii((unsigned char)**ptr)) {
+		//	errno = EINVAL;
+		//	*errbuf = "Non-ASCII characters found";
+		//	return -1;
+		//}
 		(*ptr)++;
 		(*len)++;
 	}
